@@ -1,3 +1,123 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 393px;
+  height: 852px;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  flex-shrink: 0;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.input-area, .list-area {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  width: 100px; /* ラベルの幅を指定 */
+}
+
+input[type="text"], textarea, select {
+  width: calc(100% - 110px); /* ラベルの幅を引いた残りの幅 */
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 150px; /* ナレッジの高さを指定 */
+}
+
+button {
+  margin-right: 5px;
+}
+
+h2 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.register-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.accordion-button {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-details {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card-actions button {
+  margin-right: 5px;
+}
+
+.list-area {
+  overflow-y: auto;
+  max-height: 400px; /* 必要に応じて調整 */
+}
+
 .App {
   text-align: center;
 }

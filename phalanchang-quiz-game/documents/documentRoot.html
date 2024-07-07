@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown Viewer</title>
+    <script src="showdown.min.js"></script> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black;
+        }
+        #menu {
+            margin-bottom: 20px;
+        }
+        #menu a {
+            margin-right: 10px;
+        }
+        #toggle-dark-mode {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <a href="#" onclick="loadMarkdown('content1.md')">Document 1</a>
+        <a href="#" onclick="loadMarkdown('content2.md')">Document 2</a>
+        <a href="#" onclick="loadMarkdown('content3.md')">Document 3</a>
+        <span id="toggle-dark-mode">Toggle Dark Mode</span>
+    </div>
+    <div id="content"></div>
+    <script>
+        async function loadMarkdown(file) {
+            const response = await fetch(file);
+            const markdown = await response.text();
+            const converter = new showdown.Converter();
+            const html = converter.makeHtml(markdown);
+            document.getElementById('content').innerHTML = html;
+        }
+        // 初期表示
+        loadMarkdown('content1.md');
+
+        // ダークモードの切り替え
+        document.getElementById('toggle-dark-mode').addEventListener('click', () => {
+            const body = document.body;
+            if (body.style.backgroundColor === 'white') {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            } else {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+            }
+        });
+    </script>
+</body>
+</html>

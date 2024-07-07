@@ -1,0 +1,8 @@
+{
+    "mysql": {
+      "host": "phalanchang-quiz-game.cpgqsem4ypro.ap-northeast-1.rds.amazonaws.com",
+      "user": "admin",
+      "password": "kuro9250",
+      "database": "phalanchang_quiz"
+    }
+  }

@@ -1,0 +1,26 @@
+import React from 'react';
+import axios from 'axios';
+
+function App() {
+  const handleInsertRecord = () => {
+    axios.post('http://localhost:5000/api/insert', { name: 'Sample Name' })
+      .then(response => {
+        alert('Record inserted successfully');
+      })
+      .catch(error => {
+        console.error('There was an error inserting the record!', error);
+        alert('Error inserting record');
+      });
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Insert Record Test</h1>
+        <button onClick={handleInsertRecord}>Insert Record</button>
+      </header>
+    </div>
+  );
+}
+
+export default App;

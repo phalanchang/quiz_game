@@ -1,12 +1,70 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+.top-bar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.input-area, .list-area {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  width: 100px;
+}
+
+.input-group input, .input-group textarea {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.input-group button {
+  padding: 8px 12px;
+}
+
+.list-area table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list-area table, .list-area th, .list-area td {
+  border: 1px solid #ddd;
+}
+
+.list-area th, .list-area td {
+  padding: 8px;
+  text-align: left;
+}
+
+.list-area button {
+  padding: 4px 8px;
+  margin-right: 5px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
